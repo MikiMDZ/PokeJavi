@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokedesdecero.HelloController">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+            <image>
+                <Image url="@fondo.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('fondo.jpg'); ">
+            <children>
+                <GridPane maxHeight="370.0" maxWidth="600.0" minHeight="370.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+                    </rowConstraints>
+                    <children>
+                        <ImageView fx:id="p1img" fitHeight="106.0" fitWidth="109.0" onMouseClicked="#onp1clicked" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="p2img" fitHeight="118.0" fitWidth="120.0" layoutX="37.0" layoutY="35.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="p3img" fitHeight="122.0" fitWidth="125.0" layoutX="235.0" layoutY="35.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="p4img" fitHeight="122.0" fitWidth="122.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="p5img" fitHeight="126.0" fitWidth="124.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="p6img" fitHeight="125.0" fitWidth="127.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <HBox GridPane.columnIndex="0" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p1pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <HBox.margin>
+                                        <Insets top="170.0" />
+                                    </HBox.margin>
+                                </ProgressBar>
+                                <Label id="p1ps" fx:id="p1ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="170.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p2pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <padding>
+                                        <Insets top="170.0" />
+                                    </padding>
+                                </ProgressBar>
+                                <Label id="p2ps" fx:id="p2ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets top="170.0" />
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox GridPane.columnIndex="2" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p3pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <HBox.margin>
+                                        <Insets top="170.0" />
+                                    </HBox.margin>
+                                </ProgressBar>
+                                <Label id="p5ps" fx:id="p3ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="170.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p4pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <padding>
+                                        <Insets top="170.0" />
+                                    </padding>
+                                </ProgressBar>
+                                <Label id="p4ps" fx:id="p4ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="170.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p5pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <padding>
+                                        <Insets top="170.0" />
+                                    </padding>
+                                </ProgressBar>
+                                <Label id="p5ps" fx:id="p5ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="170.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <children>
+                                <ProgressBar fx:id="p6pb" prefWidth="130.0" progress="1.0" style="-fx-accent: green; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                                    <padding>
+                                        <Insets top="170.0" />
+                                    </padding>
+                                </ProgressBar>
+                                <Label id="p6ps" fx:id="p6ps" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" text="000/000">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="170.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="hbox1" onMouseClicked="#onp1clicked" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="p1n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                                <ImageView id="p1i" fx:id="p1g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p1l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado1" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbox2" onMouseClicked="#onp2clicked" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <children>
+                                <Label fx:id="p2n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView id="p2i" fx:id="p2g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p2l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado2" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbox3" onMouseClicked="#onp3clicked" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                            <children>
+                                <Label fx:id="p3n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView id="p3i" fx:id="p3g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p3l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado3" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbox4" onMouseClicked="#onp4clicked" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <children>
+                                <Label fx:id="p4n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView id="p4i" fx:id="p4g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p4l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado4" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbox5" onMouseClicked="#onp5clicked" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Label fx:id="p5n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView id="p5i" fx:id="p5g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p5l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado5" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbox6" onMouseClicked="#onp6clicked" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <children>
+                                <Label fx:id="p6n" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView id="p6i" fx:id="p6g" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../images/macho.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label fx:id="p6l" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Label">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ImageView fx:id="estado6" fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+
+
+
+
+
+
+
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+
+        <Button fx:id="continuar" disable="true" layoutX="528.0" layoutY="373.0" onMouseClicked="#onContinuarClicked" text="Continuar" />
+        <Button fx:id="estadisticas" layoutX="14.0" layoutY="373.0" onMouseClicked="#onestadisticasClicked" text="Estadísticas" />
+    </children>
+</AnchorPane>

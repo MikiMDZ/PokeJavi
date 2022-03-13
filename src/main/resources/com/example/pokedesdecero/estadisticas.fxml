@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokedesdecero.Estadisticas">
+   <children>
+      <PieChart fx:id="chart" mouseTransparent="true" prefHeight="322.0" prefWidth="300.0">
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding></PieChart>
+      <BarChart fx:id="bar" layoutX="300.0" mouseTransparent="true" prefHeight="336.0" prefWidth="300.0" title="Seleccionados">
+        <xAxis>
+          <CategoryAxis fx:id="nombres" label="Pokemon" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="veces" label="Veces" side="LEFT" />
+        </yAxis>
+         <padding>
+            <Insets right="10.0" top="10.0" />
+         </padding>
+      </BarChart>
+      <Label fx:id="dano" layoutX="14.0" layoutY="344.0" text="Label" />
+   </children>
+</AnchorPane>

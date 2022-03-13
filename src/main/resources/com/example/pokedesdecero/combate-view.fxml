@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokedesdecero.CombatePokemon">
+   <children>
+      <ImageView fx:id="wallpaper" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../images/wallpaper.png" />
+         </image></ImageView>
+      <ImageView fx:id="pokemona" fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pokemone" fitHeight="150.0" fitWidth="200.0" layoutX="373.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" />
+      <BorderPane fx:id="menubasic" layoutX="386.0" layoutY="314.0" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: GHOSTWHITE; -fx-border-color: black; -fx-border-width: 3;">
+         <left>
+            <Label fx:id="atacar" onMouseClicked="#ataqueClicked" onMouseEntered="#ataqueEntered" onMouseExited="#ataqueExited" text="Atacar" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="15.0" />
+               </BorderPane.margin>
+            </Label>
+         </left>
+         <right>
+            <Label fx:id="curar" onMouseClicked="#curarLabelClicked" onMouseEntered="#curarLabelEntered" onMouseExited="#curarLabelExited" text="Curar" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="15.0" />
+               </BorderPane.margin>
+            </Label>
+         </right>
+         <center>
+            <Label fx:id="mochila" onMouseClicked="#gotomochila" text="Mochila" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="pokemonap" layoutX="327.0" layoutY="251.0" prefHeight="54.0" prefWidth="260.0" style="-fx-background-color: GHOSTWHITE; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 10 0 10 0; -fx-background-radius: 13 0 13 0;">
+         <left>
+            <Label fx:id="nombrepokemona" text="Label" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </left>
+         <right>
+            <Label fx:id="nivelpokemona" text="Label" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </right>
+         <bottom>
+            <HBox prefHeight="15.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="pppokemona" onMouseEntered="#onMouseAtaqueEntered" onMouseExited="#onMouseAtaqueExited" text="Label">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="barrapokemona" prefHeight="17.0" prefWidth="207.0" progress="1.0" style="-fx-accent: green; -fx-text-box-border: transparent; -fx-control-inner-background: transparent;" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <ImageView fx:id="estadoamigo" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="pokemonep" layoutX="15.0" layoutY="14.0" prefHeight="54.0" prefWidth="260.0" style="-fx-background-color: GHOSTWHITE; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 10 0 10 0; -fx-background-radius: 13 0 13 0;">
+         <left>
+            <Label fx:id="nombrepokemone" text="Label" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </left>
+         <right>
+            <Label fx:id="nivelpokemone" text="Label" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </right>
+         <bottom>
+            <HBox prefHeight="15.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="pppokemone" onMouseEntered="#onMouseEnemigoEntered" onMouseExited="#onMouseEnemigoExited" text="Label">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="barrapokemone" prefHeight="17.0" prefWidth="207.0" progress="1.0" style="-fx-accent: green; -fx-text-box-border: transparent; -fx-control-inner-background: transparent;" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <ImageView fx:id="estadoenemigo" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="ataques" layoutX="18.0" layoutY="117.0" prefHeight="74.0" prefWidth="228.0" style="-fx-background-color: GHOSTWHITE; -fx-border-color: black; -fx-border-width: 3;" visible="false">
+         <left>
+            <Label fx:id="seguro" onMouseClicked="#ataqueSeguroClicked" onMouseEntered="#ataqueSeguroEntered" onMouseExited="#ataqueSeguroExited" style="-fx-background-color: GREENYELLOW; -fx-border-width: 1; -fx-border-color: black;" text="Seguro" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </left>
+         <center>
+            <Label fx:id="arriesgado" onMouseClicked="#ataqueArriesgadoClicked" onMouseEntered="#ataqueArriesgadoEntered" onMouseExited="#ataqueArriesgadoExited" style="-fx-background-color: gold; -fx-border-width: 1; -fx-border-color: black;" text="Arriesgado" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <right>
+            <Label fx:id="muyarriesgado" onMouseClicked="#ataqueMuyArriesgadoClicked" onMouseEntered="#ataqueMuyArriesgadoEntered" onMouseExited="#ataqueMuyArriesgadoExited" style="-fx-background-color: GREENYELLOW; -fx-border-width: 1; -fx-border-color: black;" text="M.Arriesgado" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" right="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </right>
+         <bottom>
+            <Label fx:id="cancelar" onMouseClicked="#cancelarAtaqueClicked" onMouseEntered="#cancelarAtaqueEntered" onMouseExited="#cancelarAtaqueExited" text="Cancelar" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
